@@ -21,8 +21,7 @@ app.use("/rjesenoPitanje", rjesenaPitanja);
 app.use("/ispit", ispitRoutes);
 app.use("/certifikat", certifikatRoutes);
 
-const CONNECTION_URL =
-  "mongodb+srv://pdavor:pdavor123@cluster0.2nd8w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const CONNECTION_URL = process.env.MONGO_URI;
 const PORT = process.env.PORT || 5000;
 
 mongoose
